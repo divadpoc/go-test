@@ -9,7 +9,7 @@ VERSION := $(shell git describe --tags --always --dirty)
 BUILD := $(shell date +%Y-%m-%d\ %H:%M)
 
 # LDFLAGS=-ldflags="-X 'main.Version=${VERSION}' -X 'main.Build=${BUILD}' -X 'libcommon.Build=${BUILD}'"
-LDFLAGS=-ldflags="-w -s -X 'libcommon.Version=${VERSION}' -X 'libcommon.Build=${BUILD}'"
+LDFLAGS=-ldflags="-w -s -X 'gotest/libcommon.Version=${VERSION}' -X 'gotest/libcommon.Build=${BUILD}'"
 
 hello:
 	echo "Hello ${LDFLAGS}"
